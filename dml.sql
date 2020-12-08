@@ -31,16 +31,16 @@ INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, 
 INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('quickly@gmail.com', 'You', 'Thought', '6178675309', '1234567891', '1234567891', 19, 1, 1, 'Russian', 9);
 INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('lastone@gmail.com', 'Brain', 'Brian', '6178675309', '1234567891', '1234567891', 65, 1, 1, 'Italian', 10);
 
-INSERT INTO Event (eventName) VALUES ('help Trevor out');
-INSERT INTO Event (eventName) VALUES ('help Julia out');
-INSERT INTO Event (eventName) VALUES ('gif good grade');
-INSERT INTO Event (eventName) VALUES ('databasedesign');
-INSERT INTO Event (eventName) VALUES ('I am trying');
-INSERT INTO Event (eventName) VALUES ('need higher gpa');
-INSERT INTO Event (eventName) VALUES ( 'am tired');
-INSERT INTO Event (eventName) VALUES ('its midnight');
-INSERT INTO Event (eventName) VALUES ('Derbinsky da best');
-INSERT INTO Event (eventName) VALUES ('yes brownie point pls');
+INSERT INTO Events (eventName) VALUES ('help Trevor out');
+INSERT INTO Events (eventName) VALUES ('help Julia out');
+INSERT INTO Events (eventName) VALUES ('gif good grade');
+INSERT INTO Events (eventName) VALUES ('databasedesign');
+INSERT INTO Events (eventName) VALUES ('I am trying');
+INSERT INTO Events (eventName) VALUES ('need higher gpa');
+INSERT INTO Events (eventName) VALUES ( 'am tired');
+INSERT INTO Events (eventName) VALUES ('its midnight');
+INSERT INTO Events (eventName) VALUES ('Derbinsky da best');
+INSERT INTO Events (eventName) VALUES ('yes brownie point pls');
 
 INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (1, 1, 'Y', 'M', 'Y');
 INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (1, 2, 'N', 'Y', 'N');

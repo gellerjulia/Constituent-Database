@@ -34,7 +34,7 @@ CREATE TABLE Constituent (
 );
 
 
-CREATE TABLE Event (
+CREATE TABLE Events (
 	eventName VARCHAR (50),
 	eventId INT AUTO_INCREMENT,
 	CONSTRAINT EventPK PRIMARY KEY (eventId)
@@ -49,7 +49,7 @@ CREATE TABLE EventRsvp (
 	CONSTRAINT EventRsvpFK1
 	FOREIGN KEY (constituentNameId) REFERENCES Constituent (nameId),
 	CONSTRAINT EventRsvpFK2
-	FOREIGN KEY (eventId) REFERENCES Event (eventId),
+	FOREIGN KEY (eventId) REFERENCES Events (eventId),
 	CONSTRAINT EventRsvpPK PRIMARY KEY (eventId, constituentNameId)
 );
 
