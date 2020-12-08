@@ -92,6 +92,7 @@ CREATE TABLE TimeLog (
              monthCalled INT,
              yearCalled INT,
 	totalCallsMade INT,
+	numPickedUp INT,
              dayCalled INT,
 	CONSTRAINT TimeLogFK FOREIGN KEY (callerId) REFERENCES Caller (callerId),
 	CONSTRAINT TimeLogPK PRIMARY KEY (timeLogId)
@@ -114,4 +115,4 @@ FOREIGN KEY (constituentNameId) REFERENCES Constituent (nameID),
 CONSTRAINT  EmailsForNewsletterPK PRIMARY KEY (emailNewsletterId, constituentNameId)
 );
 
-CREATE INDEX constituentIndex ON Constituent (nameId);
+CREATE INDEX constituentIndex ON Constituent (firstName, lastName);

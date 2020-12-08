@@ -39,7 +39,7 @@ INSERT INTO Event (eventName) VALUES ('I am trying');
 INSERT INTO Event (eventName) VALUES ('need higher gpa');
 INSERT INTO Event (eventName) VALUES ( 'am tired');
 INSERT INTO Event (eventName) VALUES ('its midnight');
-INSERT INTO Event (eventName) VALUES ('Nate da best');
+INSERT INTO Event (eventName) VALUES ('Derbinsky da best');
 INSERT INTO Event (eventName) VALUES ('yes brownie point pls');
 
 INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (1, 1, 'Y', 'M', 'Y');
@@ -52,6 +52,28 @@ INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed)
 INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (8, 8,  'Y', NULL, 'N');
 INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (9, 2, 'N', 'Y', 'N');
 INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (10, 1, 'Y', 'N', 'N');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (1, 3, 'Y', 'Y', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (1, 4, 'Y', 'Y', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (1, 5, 'Y', 'Y', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (1, 6, 'Y', 'Y', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (1, 7, 'Y', 'Y', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (1, 8, 'Y', 'Y', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (3, 4, 'Y', 'N', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (3, 5, 'Y', 'N', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (3, 6, 'Y', 'Y', 'N');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (3, 7, 'Y', 'Y', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (3, 8, 'Y', 'N', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (3, 1, 'Y', 'N', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (4, 1,  'N', 'Y', 'N');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (4, 2,  'N', 'N', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (4, 3,  'N', 'N', 'Y');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (6, 1, 'N', 'N', 'N');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (6, 2, 'N', 'N', 'N');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (6, 3, 'N', 'N', 'N');
+INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed) VALUES (6, 4, 'N', 'N', 'N');
+
+
+
 
 INSERT INTO Supervisor (firstName, lastName) VALUES ('Larry', 'Lard');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('Shoeless', 'Jones');
@@ -59,9 +81,9 @@ INSERT INTO Supervisor (firstName, lastName) VALUES ('Trevor', 'Trevor');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('Larry', 'Steve');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('Steve', 'Lard');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('Mary', 'Philips');
-INSERT INTO Supervisor (firstName, lastName) VALUES ('Mary', 'Lots of Ls');
+INSERT INTO Supervisor (firstName, lastName) VALUES ('Mary', 'Lee');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('John', 'Johnson');
-INSERT INTO Supervisor (firstName, lastName) VALUES ('Nate', 'is best Prof  :)');
+INSERT INTO Supervisor (firstName, lastName) VALUES ('Nate', 'Derbinsky:)');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('Katie', 'Queen');
 
 INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Larry', 'Lard', 1);
@@ -75,27 +97,27 @@ INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('ThatOther', 'Pot
 INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Larry', 'Lard', 8);
 INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('abc', 'Stevington', 8);
 
-INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId) VALUES ('work', 'N', 1);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId) VALUES ('work', 'Y', 'nice', 'thirsty', 2);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId) VALUES ('work', 'N', 3);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId) VALUES ('home', 'Y', 'weirdo', 'crazy chipmunks attacking smaller chipmunks. Ate my radishes', 1);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId) VALUES ('home', 'N', 3);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId) VALUES ('cell', 'N', 4);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId) VALUES ('work', 'N', 5);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId) VALUES ('work', 'Y', 'is what it is', 'not enough sleep', 9);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId) VALUES ('work', 'N', 6);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId) VALUES ('work', 'N', 7);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 1, 1);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId, callerId) VALUES ('work', 'Y', 'nice', 'thirsty', 2, 1);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 3, 1);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId, callerId) VALUES ('home', 'Y', 'weirdo', 'crazy chipmunks attacking smaller chipmunks. Ate my radishes', 1, 2);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('home', 'N', 3, 2);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('cell', 'N', 4, 2);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 5, 2);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId, callerId) VALUES ('work', 'Y', 'is what it is', 'not enough sleep', 9, 2);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 6, 7);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 7, 8);
 
-INSERT INTO TimeLog (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (1, 1130, 'Wednesday', 1135, 2, 2012, 1000, 5);
-INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (1, 2330, 'Friday', 2345, 3, 2001, 500, 6);
-INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (4, 0430, 'Wednesday', 0435, 6, 24, 100, 10);
-INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (4, 0030, 'Friday', 0123, 3, 2001, 90, 7);
-INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (4, 1330, 'Monday', 1324, 4, 2010, 600, 8);
-INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (4, 0510, 'Monday', 0710, 6, 2010, 600, 4);
-INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (7, 0910, 'Monday', 0912, 7, 2010, 610, 5);
-INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (8, 1140, 'Tuesday', 1143, 5, 2011, 20, 9);
-INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (8, 1650, 'Thursday', 1850, 5, 2020, 900, 7);
-INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, dayCalled) VALUES (9, 0520, 'Tuesday', 0521, 5, 2019, 700, 10);
+INSERT INTO TimeLog (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (1, 1130, 'Wednesday', 1135, 2, 2012, 1000, 10, 5);
+INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (1, 2330, 'Friday', 2345, 3, 2001, 500, 495, 6);
+INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (4, 0430, 'Wednesday', 0435, 6, 24, 100, 90, 10);
+INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (4, 0030, 'Friday', 0123, 3, 2001, 90, 10, 7);
+INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (4, 1330, 'Monday', 1324, 4, 2010, 600, 599, 8);
+INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (4, 0510, 'Monday', 0710, 6, 2010, 600, 600, 4);
+INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (7, 0910, 'Monday', 0912, 7, 2010, 610, 1, 5);
+INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (8, 1140, 'Tuesday', 1143, 5, 2011, 20, 0, 9);
+INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (8, 1650, 'Thursday', 1850, 5, 2020, 900, 343, 7);
+INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (9, 0520, 'Tuesday', 0521, 5, 2019, 700, 400, 10);
 
 INSERT INTO Newsletter (bodyText, name) VALUES ('rowdy teens stay up late to do database design homework', 'wild'); 
 INSERT INTO Newsletter (bodyText, name) VALUES ('todays teens get little sleep. Why?', 'Tuesday');
