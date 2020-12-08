@@ -1,44 +1,46 @@
-INSERT INTO Address (houseNumber, stName, ward) VALUES (8, 'Teletubby Rd.', 1);
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (8, 'Teletrop Rd.', 1, 1, ‘21b’);
 INSERT INTO Address (houseNumber, stName, ward, aptNumber)  VALUES (6, 'Jenny Rd.', 2, '123');
 INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (7, 'Tommy Rd.', 3, '90');
-INSERT INTO Address (houseNumber, stName, ward) VALUES (5, 'Tutone St.', 3);
-INSERT INTO Address (houseNumber, stName, ward) VALUES (3, 'Teletubby Ave.', 4);
-INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (0, 'Rose Boulevard.', 5, '21B');
-INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (9, 'Rose Boulevard.', 5, '21B');
-INSERT INTO Address (houseNumber, stName, ward) VALUES (100, 'Tremont.', 5);
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (5, 'Tutone St.', 3, ‘30c’);
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (3, 'Tiptoe Ave.', 4, ‘Unit 1’);
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (10, 'Rose Boulevard.', 5, '21B');
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (9, 'Rose Boulevard.', 5, NULL);
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (100, 'Tremont st', 5, NULL);
 INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (253, 'Sussex St.', 9, '12');
-INSERT INTO Address (houseNumber, stName, ward) VALUES (8, 'Columbus.', 1);
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (8, 'Columbus ave.', 1, NULL);
+                                                                 
 
 INSERT INTO PoliticalParty (partyName) VALUES ('democrat');
 INSERT INTO PoliticalParty (partyName) VALUES (NULL);
 INSERT INTO PoliticalParty (partyName) VALUES ('republican');
 INSERT INTO PoliticalParty (partyName) VALUES ('independent');
-INSERT INTO PoliticalParty (partyName) VALUES ('patriots');
 INSERT INTO PoliticalParty (partyName) VALUES ('green');
-INSERT INTO PoliticalParty (partyName) VALUES ('red party');
-INSERT INTO PoliticalParty (partyName) VALUES ('blue party');
-INSERT INTO PoliticalParty (partyName) VALUES ('yes party');
-INSERT INTO PoliticalParty (partyName) VALUES ('party');
+INSERT INTO PoliticalParty (partyName) VALUES ('green');
+INSERT INTO PoliticalParty (partyName) VALUES (progressive);
+INSERT INTO PoliticalParty (partyName) VALUES (socialist);
+INSERT INTO PoliticalParty (partyName) VALUES (socialist);
+INSERT INTO PoliticalParty (partyName) VALUES (libertarian);
 
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('mybrainhurts@gmail.com', 'Brain', 'Brian', '6178675309', '1234567891', '1234567891', 100, 1, 1, 'Pig Latin', 0);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('somethingelse@gmail.com', 'Tim', 'Beans', '4839105819', '1234567891', '1234567891', 20, NULL, 1, 'English', NULL);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('icantthinkofthings@gmail.com', 'Smoothie', 'Mango', '6178675309', '1234567891', '1234567891', 30, NULL, 1,  'English', 0);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('help@gmail.com', 'Mr.', 'Bean', '6178675309', '1234567891', '1234567891', 40, NULL, 2, 'Spanish', 2);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('im@gmail.com', 'Mrs.', 'Clause', '6178675309', '1234567891', '1234567891', 56, 4, 10, 'Mandarin', 10);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('running@gmail.com', 'Sara', 'Sara', '6178675309', '1234567891', '1234567891', 20, 4, 8, 'Manadarin', 100);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ( 'out@gmail.com', 'Hannah', 'Montana', '6178675309', '1234567891', '1234567891', 10, 6,  7, 'English', 5);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('very@gmail.com', 'Kris', 'Kringle', '6178675309', '1234567891', '1234567891', 18, 10, 6, 'Spanish', 7);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('quickly@gmail.com', 'You', 'Thought', '6178675309', '1234567891', '1234567891', 19, 1, 1, 'Russian', 9);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('lastone@gmail.com', 'Brain', 'Brian', '6178675309', '1234567891', '1234567891', 65, 1, 1, 'Italian', 10);
 
-INSERT INTO Events (eventName) VALUES ('help Trevor out');
-INSERT INTO Events (eventName) VALUES ('help Julia out');
-INSERT INTO Events (eventName) VALUES ('gif good grade');
-INSERT INTO Events (eventName) VALUES ('databasedesign');
-INSERT INTO Events (eventName) VALUES ('I am trying');
-INSERT INTO Events (eventName) VALUES ('need higher gpa');
-INSERT INTO Events (eventName) VALUES ( 'am tired');
-INSERT INTO Events (eventName) VALUES ('its midnight');
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('TimBenson@gmail.com', 'Tim', Benson, '4839105819', '1234567891', '1234567891', 20, NULL, 1, 'English', 0);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('iSusanMom@gmail.com', 'Susam', 'Monole', '6178675309', '1234562791', '1285567891', 30, NULL, 1, 'English', 0);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('BeanHoward@gmail.com', 'Mr.', 'Howard', '6008675309', '1234582891', '1294567891', 40, NULL, 2, 'Spanish', 2);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('SusanClaus@gmail.com', 'Susan.', 'Claus', '6028675309', '1234529891', '1234307891', 56, 4, 10, 'German', 10);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('runningStoreGear@gmail.com', 'Marta', 'Castillo', '6178205309', '1246787891', '9078567891', 20, 4, 8, 'Spanish', 100);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ( 'Ha.Mo@gmail.com', 'Hannah', 'Morton', '6902775309', '1231029391', '1266778591', 10, 6, 7, 'English', 5);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('KrisK@hotmail.com', 'Kris', 'Krin', '6179175309', '1238266791', '1200067891', 18, 10, 6, 'Spanish', 7);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('L.k@gmail.com', 'Luisa', 'Krin', '6178675309', ‘1238266791’, '1200067891', 100, 1, 1, 'Spanish', 8);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('V.artinov@yahoo.com', 'Vlad', 'Artinov', '6166443309', '1977567091', '1230087891', 19, 1, 1, 'Russian', 9);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('LucaDgoro@gmail.com', 'Luca', 'Dgoro', '6170063309', '1994337891', '3334007891', 65, 1, 1, 'Italian', 10);
+
+INSERT INTO Events (eventName) VALUES ('Fall 2019 Town Hall ');
+INSERT INTO Events (eventName) VALUES ('Winter 2019 Town Hall');
+INSERT INTO Events (eventName) VALUES ('Emergency Ward 9 Meeting');
+INSERT INTO Events (eventName) VALUES ('Spring 2020 Town Hall');
+INSERT INTO Events (eventName) VALUES ('Protest The Bus System');
+INSERT INTO Events (eventName) VALUES ('Senior Citizens Day');
+INSERT INTO Events (eventName) VALUES ( 'Dog Festival');
+INSERT INTO Events (eventName) VALUES ('Summer Town Hall 2021');
 INSERT INTO Events (eventName) VALUES ('Derbinsky da best');
 INSERT INTO Events (eventName) VALUES ('yes brownie point pls');
 
@@ -75,36 +77,36 @@ INSERT INTO EventRsvp (constituentNameId, eventId, inPerson, rsvpStatus, showed)
 
 
 
-INSERT INTO Supervisor (firstName, lastName) VALUES ('Larry', 'Lard');
-INSERT INTO Supervisor (firstName, lastName) VALUES ('Shoeless', 'Jones');
-INSERT INTO Supervisor (firstName, lastName) VALUES ('Trevor', 'Trevor');
-INSERT INTO Supervisor (firstName, lastName) VALUES ('Larry', 'Steve');
-INSERT INTO Supervisor (firstName, lastName) VALUES ('Steve', 'Lard');
+INSERT INTO Supervisor (firstName, lastName) VALUES ('Larry', 'Miller');
+INSERT INTO Supervisor (firstName, lastName) VALUES ('Sam', 'Addard');
+INSERT INTO Supervisor (firstName, lastName) VALUES ('Trevor', 'Khanna');
+INSERT INTO Supervisor (firstName, lastName) VALUES ('Julia', 'Geller');
+INSERT INTO Supervisor (firstName, lastName) VALUES ('Tim', 'Lard');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('Mary', 'Philips');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('Mary', 'Lee');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('John', 'Johnson');
 INSERT INTO Supervisor (firstName, lastName) VALUES ('Nate', 'Derbinsky:)');
-INSERT INTO Supervisor (firstName, lastName) VALUES ('Katie', 'Queen');
+INSERT INTO Supervisor (firstName, lastName) VALUES ('Katie', 'Quillen');
 
-INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Larry', 'Lard', 1);
+INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Sarah', 'Larrell', 1);
 INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Steve', 'Stevington', 1);
 INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Mary', 'Marion', 4);
-INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Will', 'William', 4);
-INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Harriet', 'Harry', 6);
-INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Harry', 'Harry', 6);
-INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Harry', 'Potter', 7);
-INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('ThatOther', 'Potter', 8);
-INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Larry', 'Lard', 8);
-INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('abc', 'Stevington', 8);
+INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Will', 'Willimington', 4);
+INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Harriet', 'Harrison', 6);
+INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Harry', 'Hotely', 6);
+INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Harry', 'Potterson', 7);
+INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Jean', 'Potterspm', 8);
+INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Maria', 'Debson', 8);
+INSERT INTO Caller (firstName, lastName, supervisorId) VALUES ('Arthur', 'Stevington', 8);
 
 INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 1, 1);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId, callerId) VALUES ('work', 'Y', 'nice', 'thirsty', 2, 1);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId, callerId) VALUES ('work', 'Y', 'urgent', 'needs medical assistance', 2, 1);
 INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 3, 1);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId, callerId) VALUES ('home', 'Y', 'weirdo', 'crazy chipmunks attacking smaller chipmunks. Ate my radishes', 1, 2);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId, callerId) VALUES ('home', 'Y', 'not urgent', 'needs help locating a city recycling center', 1, 2);
 INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('home', 'N', 3, 2);
 INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('cell', 'N', 4, 2);
 INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 5, 2);
-INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId, callerId) VALUES ('work', 'Y', 'is what it is', 'not enough sleep', 9, 2);
+INSERT INTO CallInfo (typeNumCalled, pickedUp, callNotes, constituentConcerns, constituentNameId, callerId) VALUES ('work', 'Y', 'not urgent', 'concerned about noise on Trapelo road', 9, 2);
 INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 6, 7);
 INSERT INTO CallInfo (typeNumCalled, pickedUp, constituentNameId, callerId) VALUES ('work', 'N', 7, 8);
 
@@ -119,15 +121,15 @@ INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, year
 INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (8, 1650, 'Thursday', 1850, 5, 2020, 900, 343, 7);
 INSERT INTO TimeLog  (callerId, startTime, dayOfWeek, endTime, monthCalled, yearCalled, totalCallsMade, numPickedUp, dayCalled) VALUES (9, 0520, 'Tuesday', 0521, 5, 2019, 700, 400, 10);
 
-INSERT INTO Newsletter (bodyText, name) VALUES ('rowdy teens stay up late to do database design homework', 'wild'); 
-INSERT INTO Newsletter (bodyText, name) VALUES ('todays teens get little sleep. Why?', 'Tuesday');
-INSERT INTO Newsletter (bodyText, name) VALUES ('this boy is sleepy', 'another day');
-INSERT INTO Newsletter (bodyText, name) VALUES ('hungry hippos eat bananas', 'name');
-INSERT INTO Newsletter (bodyText, name) VALUES ('only so much creativity in one session', 'todays news');
-INSERT INTO Newsletter (bodyText, name) VALUES ('what could go wrong if one stays up all night?', 'who knows');
-INSERT INTO Newsletter (bodyText, name) VALUES ('another bites the dust', 'another one gone');
-INSERT INTO Newsletter (bodyText, name) VALUES ('doggy are cute', 'bad grammar');
-INSERT INTO Newsletter (bodyText, name) VALUES ('how YOU can be a millionaire with this one trick!', 'haha');
+INSERT INTO Newsletter (bodyText, name) VALUES ('The city needs more gas stations! According to the Center for urban planning, more gas stations allows for more consumerism and attracts more visitors from other towns. AS a result, we are going to city hall to protest for more gas stations this saturday from 12 pm to 8pm. We hope you will join us.', 'Pressing Gas Concern'); 
+INSERT INTO Newsletter (bodyText, name) VALUES ('Today teens get little sleep. This isan urgent concern for the health of our youth', 'Sleep deprivation');
+INSERT INTO Newsletter (bodyText, name) VALUES ('Hello Constituents, I am happy to report we closed another day of council sucessfully.', 'Another Successful Day');
+INSERT INTO Newsletter (bodyText, name) VALUES ('Struggling to find good email newsletter design examples to inspire you? We have got you covered!', 'Newsletter Ad');
+INSERT INTO Newsletter (bodyText, name) VALUES ('What is it: Bark is a company that wants to be the voice for dogs in a human-led world. BarkBox is a newsletter that accompanies a monthly box of themed dog toys and treats. It also offers an easy way for people to buy the offerings.', 'BarkBox');
+INSERT INTO Newsletter (bodyText, name) VALUES ('Away is a startup that creates “thoughtful” luggage with features that solve real travel problems. The luggage is also built with materials that are resilient and simple.', 'Away Ad');
+INSERT INTO Newsletter (bodyText, name) VALUES ('A magazine that encourages readers to “cook with confidence, enjoy your food, and find recipes.” Beware of skimming with an empty stomach.', 'Bon Appetit');
+INSERT INTO Newsletter (bodyText, name) VALUES (' Its newsletter design categorizes content by length: short, mid, and long. That way, readers know the time commitment they’ve made when looking at certain pieces of content and can easily scroll to what they’re interested in.', 'Newsletter Analysis');
+INSERT INTO Newsletter (bodyText, name) VALUES ('how YOU can be a millionaire with this one trick!', 'Spam Mail');
 INSERT INTO Newsletter (bodyText, name) VALUES ('The Indiana Family and Social Service Administration (FSSA) automation story, especially the story of Sophie Stipes, resonates with me the most. It is a story about a child who was born with several development delays for which treatment costed over $6,000 a month. Despite facing immense troubles, she started to overcome the issues only to be stopped by an automated system. It shows how that even after they tried to correct the systems’ mistake, they were stymied because of misinformation or no information from people who should have known what was going on. Essentially, the stories describe how helpless the Stipes felt. Being helpless is a feeling that evokes powerful emotions from everyone.
         	The shortcomings of the new system in Indiana are amplified by personal stories. The letter (Figure 1) that the Stipes family received that told them that they would lose their benefits was addressed to Sophie herself, who was just 6 years old at the time. This is just one of many possible issues that arise when people are reduced to numbers and statistics.
 Figure 1: The letter saying that Sophie’s Medicaid benefits would be discontinued
