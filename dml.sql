@@ -1,8 +1,8 @@
-INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (8, 'Teletrop Rd.', 1, 1, ‘21b’);
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (8, 'Teletrop Rd.', 1, 1, '21b’);
 INSERT INTO Address (houseNumber, stName, ward, aptNumber)  VALUES (6, 'Jenny Rd.', 2, '123');
 INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (7, 'Tommy Rd.', 3, '90');
-INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (5, 'Tutone St.', 3, ‘30c’);
-INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (3, 'Tiptoe Ave.', 4, ‘Unit 1’);
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (5, 'Tutone St.', 3, '30c’);
+INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (3, 'Tiptoe Ave.', 4, 'Unit 1’);
 INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (10, 'Rose Boulevard.', 5, '21B');
 INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (9, 'Rose Boulevard.', 5, NULL);
 INSERT INTO Address (houseNumber, stName, ward, aptNumber) VALUES (100, 'Tremont st', 5, NULL);
@@ -29,7 +29,7 @@ INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, 
 INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('runningStoreGear@gmail.com', 'Marta', 'Castillo', '6178205309', '1246787891', '9078567891', 20, 4, 8, 'Spanish', 100);
 INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ( 'Ha.Mo@gmail.com', 'Hannah', 'Morton', '6902775309', '1231029391', '1266778591', 10, 6, 7, 'English', 5);
 INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('KrisK@hotmail.com', 'Kris', 'Krin', '6179175309', '1238266791', '1200067891', 18, 10, 6, 'Spanish', 7);
-INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('L.k@gmail.com', 'Luisa', 'Krin', '6178675309', ‘1238266791’, '1200067891', 100, 1, 1, 'Spanish', 8);
+INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('L.k@gmail.com', 'Luisa', 'Krin', '6178675309', '1238266791’, '1200067891', 100, 1, 1, 'Spanish', 8);
 INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('V.artinov@yahoo.com', 'Vlad', 'Artinov', '6166443309', '1977567091', '1230087891', 19, 1, 1, 'Russian', 9);
 INSERT INTO Constituent (email, firstName, lastName, workNum, cellNum, homeNum, age, addressId, partyId, primaryLanguage, numPoliticalEventsAttended) VALUES ('LucaDgoro@gmail.com', 'Luca', 'Dgoro', '6170063309', '1994337891', '3334007891', 65, 1, 1, 'Italian', 10);
 
