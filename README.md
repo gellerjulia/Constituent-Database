@@ -23,7 +23,10 @@ Once this is done, open up a browsing application (i.e. Chrome, Safari, Firefox,
 
 Now the ddl.sql and dml.sql file must be imported. There will be an import tab in the about the middle of the page at the top. If you navigated away from the constituents database, you can return to it by clicking on constituents on the left side of the window. Under File to Import, click the choose file/browse button. Then choose the ddl.sql file that was downloaded. Then press Go on the bottom right side of the page. Once thats down, navigate back to the import page and repeat the same steps but this time upload the dml.sql file.
 
-If you are using an OS operating system, navigate to Terminal.
+If you are using an OS operating system, adhere to the following instructions:
+
+Navigate to Terminal.
+
 First enter the downloaded zip file. This is done by typing cd and then the source path. For me, I type: 
 
 cd /Users/trevorkhanna/Downloads/database-project-main
@@ -40,23 +43,23 @@ Finally type:
 
 java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root
 
-If you are using Windows, navigate to the Command Line
-The following steps will be the same as if you are using an OS operating system except the soruce path may change.
-To enter the downloaded files type:
+If you are using Windows, adhere to the following:
 
-C:\Users\yourusernamehere\Downloads --> followed by the name of the downloaded folder
+Navigate to database-project-main file. Right click the bar at the top with the location of the database-project-main file and type CMD and hit enter. 
+
 
 To compile the source code type:
 
 javac ConstituentDatabase.java
 
-Then type: 
+Hit enter.
 
-java -cp mariadb-java-client-2.1.1.jar;bin.databases.ConstituentDatabase
+To run the database, type: 
 
-Finally type:
+java -cp "bin;mariadb-java-client-2.1.1.jar" databases.ConstituentDatabase localhost/constituents?user=root
 
-java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root
+Hit enter.
+
 
 *Note: the downloaded file name cannot have any spaces
 
