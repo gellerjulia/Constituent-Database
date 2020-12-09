@@ -71,3 +71,8 @@ Hit enter.
 
 Now feel free to use the program as you wish!
 
+System Installation Video:
+https://youtu.be/NqXZW3Dej3U
+
+
+
