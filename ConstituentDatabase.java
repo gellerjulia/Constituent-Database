@@ -63,8 +63,8 @@ public class ConstituentDatabase {
           System.out.println("Here's a list of all the newsletterIds and nameIds");
 
           //queries that give the user enough information to perform this task
-          final String queryNewsletters = "SELECT n.newsletterId FROM Newsletter n ORDER BY n.newsletterId ASC;";
-          final String queryConstituents = "SELECT c.nameId FROM Constituent c ORDER BY c.nameId ASC;";
+          final String queryNewsletters = "SELECT n.newsletterId, n.Name FROM Newsletter n ORDER BY n.newsletterId ASC;";
+          final String queryConstituents = "SELECT c.nameId, c.firstName, c.lastName FROM Constituent c ORDER BY c.nameId ASC;";
           final String queryConnections = "SELECT n.newsletterId, c.nameId\n"
               + "FROM Newsletter n \n"
               + "  INNER JOIN EmailsForNewsletter e ON n.newsletterId = e.emailNewsletterId\n"
@@ -83,9 +83,9 @@ public class ConstituentDatabase {
             try (final ResultSet res1 = qNls.executeQuery();
                 final ResultSet res2 = qCs.executeQuery();
                 final ResultSet res3 = qConns.executeQuery()) {
-              System.out.println("NewsletterIds : NameIds");
+              System.out.println("NewsletterIds       :       Newsletter Names        :        NameIds    :          Names        ");
 
-              // to make the format better
+              // to make the format better when there is not as many newsletters as constituents
               int counter = 0; 
               String spaces = "";
 
@@ -100,14 +100,16 @@ public class ConstituentDatabase {
                 counter++;
 
                 if (res1Next && res2Next) {
-                  System.out.printf("%-16s%s%n", res1.getInt(1), res2.getInt(1));
+                  System.out.printf("%-25s%-39s%-16s%s %s%n", res1.getInt(1), res1.getString(2), res2.getInt(1), 
+                      res2.getString(2), res2.getString(3));
                   validNLIds.add(((Integer) res1.getInt(1)).toString());
                   validNIds.add(((Integer) res2.getInt(1)).toString());
                 } else if (res1Next) {
-                  System.out.printf("%-16s%n", res1.getInt(1));
+                  System.out.printf("%-25s%-39s%n", res1.getInt(1), res1.getString(2));
                   validNLIds.add(((Integer) res1.getInt(1)).toString());
                 } else if (res2Next) {
-                  System.out.printf("%-16s%s%n", spaces,res2.getInt(1));;
+                  System.out.printf("%-25s                              %-16s%s %s%n", spaces,res2.getInt(1), 
+                      res2.getString(2), res2.getString(3));
                   validNIds.add(((Integer) res2.getInt(1)).toString());
                 }
                 res1Next = res1.next();
