@@ -52,7 +52,7 @@ javac ConstituentDatabase.java
 
 Then type: 
 
-java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase
+java -cp mariadb-java-client-2.1.1.jar;bin.databases.ConstituentDatabase
 
 Finally type:
 
