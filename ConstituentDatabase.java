@@ -163,17 +163,17 @@ public class ConstituentDatabase {
           System.out.println("Here's a list of all the nameIds");
           
           // gives the user information to perform the query
-          final String queryConstituents = "SELECT c.nameId FROM Constituent c ORDER BY c.nameId ASC;";
+          final String queryConstituents = "SELECT c.nameId, c.firstName, c.lastName FROM Constituent c ORDER BY c.nameId ASC;";
 
           ArrayList<String> validNIds = new ArrayList<String>();
 
           try (final PreparedStatement qCs = connection.prepareStatement(queryConstituents);) {
 
             try (final ResultSet res = qCs.executeQuery();) {
-              System.out.println("NameIds");
+
 
               while (res.next()) {
-                System.out.printf("%s%n", res.getInt(1));
+                System.out.printf("ID: %s -- Name: %s %s%n", res.getInt(1), res.getString(2), res.getString(3));
                 validNIds.add(((Integer) res.getInt(1)).toString());
               }
             }
