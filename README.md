@@ -38,7 +38,7 @@ java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase
 
 Finally type:
 
-java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root2.1.1.jar databases.ConstituentDatabase 
+java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root
 
 If you are using Windows, navigate to the Command Line
 The following steps will be the same as if you are using an OS operating system except the soruce path may change.
@@ -52,7 +52,7 @@ java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase
 
 Finally type:
 
-java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root2.1.1.jar databases.ConstituentDatabase 
+java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root
 
 *Note: the downloaded file name cannot have any spaces
 
