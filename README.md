@@ -22,3 +22,27 @@ Once all the files have been downloaded, open up the XAMPP application. Follow t
 Once this is done, open up a browsing application (i.e. Chrome, Safari, Firefox, etc), and type in localhost in the search bar and hit enter. On the upper right side of the bar there will be a tab called phpMyAdmin. Click that tab. On the left hand side under th phpMyAdmin Logo, there will be a called New. Click that. In the tab that says Database Name, under the word Database and Create Database, enter constituents (it must bee constituents exactly or otherwise the source code will not connect properly). Once that's done, hit Create
 
 Now the ddl.sql and dml.sql file must be imported. There will be an import tab in the about the middle of the page at the top. If you navigated away from the constituents database, you can return to it by clicking on constituents on the left side of the window. Under File to Import, clock the choose file button. Then choose the ddl.sql file that was downloaded. Then press Go on the bottom right side of the page. Once thats down, navigate back to the import page and repeat the same steps but this time upload the dml.sql file.
+
+If you are using an OS operating system, navigate to Terminal.
+First enter the downloaded zip file. This is done by typing cd and then the source path. For me, I type: 
+cd /Users/trevorkhanna/Downloads/database-project-main
+Then compile the source code. To do this, type javac -d bin and then the source path. For example, I would type:
+javac -d bin /Users/trevorkhanna/Downloads/database-project-main/ConstituentDatabase.java
+Then type: 
+java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase
+Finally type:
+java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root2.1.1.jar databases.ConstituentDatabase 
+
+If you are using Windows, navigate to the Command Line
+The following steps will be the same as if you are using an OS operating system except the soruce path may change.
+To enter the downloaded files type:
+C:\Users\yourusernamehere\Downloads --> followed by the name of the downloaded file
+Then type: 
+java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase
+Finally type:
+java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root2.1.1.jar databases.ConstituentDatabase 
+
+*Note: the downloaded file name cannot have any spaces
+
+Now feel free to use the program as you wish!
+
