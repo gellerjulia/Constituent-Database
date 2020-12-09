@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ConstituentDatabase {
+  
+  /* the outline of this code was taken from the SQLiteJavaDemo.java file and the ChinookApp.java file both written
+   * by Prof. Nate Derbinksy - https://derbinsky.info/ */
 
   public static void main(String[] args) throws ClassNotFoundException {
 
@@ -184,13 +187,13 @@ public class ConstituentDatabase {
             stmt.executeQuery();
           }
 
-          System.out.println("Update work phone number of constituent with id \"" + param2 + "\" to " + param1);
+          System.out.println("Updated work phone number of constituent with id \"" + param2 + "\" to " + param1);
 
         } else if (userInput.equals("3")) {
 
           System.out.println("Here's a list of all the event ids and event names");
           final String queryConstituents = "SELECT e.eventId, e.eventName\n"
-              + "FROM Event e;";
+              + "FROM Events e;";
 
           ArrayList<String> validEIds = new ArrayList<String>();
 
@@ -213,7 +216,7 @@ public class ConstituentDatabase {
             param = input.next();
           }
 
-          final String sql = "DELETE FROM Event WHERE eventId = ?";
+          final String sql = "DELETE FROM Events WHERE eventId = ?";
 
           try (final PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, param);
@@ -230,7 +233,7 @@ public class ConstituentDatabase {
           String apt = input.next();
 
           if (apt.equalsIgnoreCase("Y")) {
-            System.out.println("Enter the house number, the street name (without the type: no \"St.\" and such), the ward number,\n" +
+            System.out.println("Enter the house number, the street name (without the type: no \"St.\" or spaces), the ward number,\n" +
                 "and the apartment number of the new address (separated by spaces, then press enter)");
 
             final String param1 = input.next();
@@ -288,14 +291,14 @@ public class ConstituentDatabase {
               while (res1.next()) {
                 System.out.printf("%s%n", res1.getInt(1));
               }
-
-              System.out.println("House Number   :  Street Name   :  Ward : Apartment Number : AddressId");
+              System.out.println();
+              System.out.println("House Number   :  Street Name       :      Ward : Apartment Number : AddressId");
 
               while (res2.next()) {
-                System.out.printf("%-18s%-17s%-7s%-19s%s%n", res2.getInt(1), res2.getString(2), res2.getString(3), res2.getString(4),
+                System.out.printf("%-18s%-25s%-7s%-19s%s%n", res2.getInt(1), res2.getString(2), res2.getString(3), res2.getString(4),
                     res2.getInt(5));
               }
-
+              System.out.println();
               System.out.println("Party Name   :   Party Ids");
 
               while (res3.next()) {
@@ -304,9 +307,9 @@ public class ConstituentDatabase {
             }
           }
 
-          System.out.println("Enter a new Id, the email, the first name, the last name, the work phone number, the cell number,\n" + 
-              "the home phone number, the age, the addressId, the partyId, the primary language, and the number of political \n" +
-              "events attended for the new constituent");
+          System.out.println("Enter a new Id, the email, the first name, the last name (if multiple last names, use a hyphen), the work phone number, the cell number,\n" + 
+              "the home phone number (no hyphens in the phone numbers), the age, the addressId, the partyId, the primary language, and the number of political \n" +
+              "events attended for the new constituent (values separated by a single space)");
 
           final String param1 = input.next();
           final String param2 = input.next();
@@ -496,7 +499,7 @@ public class ConstituentDatabase {
               + "    FROM EventRsvp er \n"
               + "    WHERE er.rsvpStatus = 'N' AND er.eventId=e.eventId) AS percentNotGoingAndNoShow,\n"
               + "        e.eventName AS eventName\n"
-              + "FROM Event e\n"
+              + "FROM Events e\n"
               + "ORDER BY percentGoingAndShowed DESC, percentNotGoingAndNoShow DESC;";
 
           /* Returns the percent of people who said they would show up and did and thee percent of people who said they 
@@ -601,7 +604,7 @@ public class ConstituentDatabase {
 
           System.out.println("Here's a list of all the event ids and event names");
           final String queryConstituents = "SELECT e.eventId, e.eventName\n"
-              + "FROM Event e;";
+              + "FROM Events e;";
 
           ArrayList<String> validEIds = new ArrayList<String>();
 
@@ -634,7 +637,7 @@ public class ConstituentDatabase {
               + "FROM \n"
               + "  (SELECT COUNT(c.nameId) AS numberAttending, e.eventId as eventId, e.eventName AS eventName \n"
               + "    FROM EventRsvp er INNER JOIN Constituent c ON er.constituentNameId = c.nameId \n"
-              + "      INNER JOIN Event e ON e.eventId = er.eventId \n"
+              + "      INNER JOIN Events e ON e.eventId = er.eventId \n"
               + "      WHERE e.eventId = ? AND er.rsvpStatus = 'Y') AS t;" ;  
 
           /* Returns the number of constituents attending a particular event, user inputs eventId of the event of interest. 
@@ -668,7 +671,7 @@ public class ConstituentDatabase {
       }
 
       if (!userInput.equalsIgnoreCase("Q")) {
-        System.out.println("Press any letter, number, or special character key to continue (\"Q\" to exit)");
+        System.out.println("Press any letter, number, or special character key to continue and then \"Enter\" (\"Q\" to exit)");
 
         userInput = input.next();
       }
