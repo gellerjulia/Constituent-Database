@@ -632,9 +632,8 @@ public class ConstituentDatabase {
 
             try (final ResultSet res = qCs.executeQuery();) {
 
-              System.out.println("Event Ids");
               while (res.next()) {
-                System.out.printf("%s%n", res.getInt(1));
+                System.out.printf("ID: %s -- Name: %s%n", res.getInt(1), res.getString(2));
                 validEIds.add(((Integer) res.getInt(1)).toString());
               }
             }
