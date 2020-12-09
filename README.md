@@ -44,7 +44,7 @@ If you are using Windows, navigate to the Command Line
 The following steps will be the same as if you are using an OS operating system except the soruce path may change.
 To enter the downloaded files type:
 
-C:\Users\yourusernamehere\Downloads --> followed by the name of the downloaded file
+C:\Users\yourusernamehere\Downloads --> followed by the name of the downloaded folder
 
 Then type: 
 
