@@ -49,7 +49,7 @@ CREATE TABLE EventRsvp (
 	CONSTRAINT EventRsvpFK1
 	FOREIGN KEY (constituentNameId) REFERENCES Constituent (nameId),
 	CONSTRAINT EventRsvpFK2
-	FOREIGN KEY (eventId) REFERENCES Events (eventId),
+	FOREIGN KEY (eventId) REFERENCES Events (eventId) ON DELETE CASCADE,
 	CONSTRAINT EventRsvpPK PRIMARY KEY (eventId, constituentNameId)
 );
 
