@@ -27,19 +27,29 @@ If you are using an OS operating system, navigate to Terminal.
 First enter the downloaded zip file. This is done by typing cd and then the source path. For me, I type: 
 cd /Users/trevorkhanna/Downloads/database-project-main
 Then compile the source code. To do this, type javac -d bin and then the source path. For example, I would type:
+
 javac -d bin /Users/trevorkhanna/Downloads/database-project-main/ConstituentDatabase.java
+
 Then type: 
+
 java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase
+
 Finally type:
+
 java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root2.1.1.jar databases.ConstituentDatabase 
 
 If you are using Windows, navigate to the Command Line
 The following steps will be the same as if you are using an OS operating system except the soruce path may change.
 To enter the downloaded files type:
+
 C:\Users\yourusernamehere\Downloads --> followed by the name of the downloaded file
+
 Then type: 
+
 java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase
+
 Finally type:
+
 java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase localhost/constituents?user=root2.1.1.jar databases.ConstituentDatabase 
 
 *Note: the downloaded file name cannot have any spaces
