@@ -71,8 +71,7 @@ Hit enter.
 
 Now feel free to use the program as you wish!
 
-System Installation Video:
-https://youtu.be/NqXZW3Dej3U
+System Installation Video: https://youtu.be/NqXZW3Dej3U
 
-
+Task Demo Video: https://youtu.be/1gChcdj2pTA
 
