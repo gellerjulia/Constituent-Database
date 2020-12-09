@@ -47,6 +47,12 @@ If you are using Windows, adhere to the following:
 
 Navigate to database-project-main file. Right click the bar at the top with the location of the database-project-main file and type CMD and hit enter. 
 
+In the database-project-main file, create two folders. One folder is called "bin", the other folder is called "databases" (exclude the quotation marks). You can create folders by clicking "New Folder" located at the top bar of the page, in the middle of the bar of options.
+
+Drag the "ConstituentDatabase.class" file into the "databases" folder.
+
+Drag the "databases folder" into the "bin" folder.
+
 
 To compile the source code type:
 
