@@ -46,9 +46,13 @@ To enter the downloaded files type:
 
 C:\Users\yourusernamehere\Downloads --> followed by the name of the downloaded folder
 
-Then type: 
+To compile the source code type:
 
 javac ConstituentDatabase.java
+
+Then type: 
+
+java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase
 
 Finally type:
 
