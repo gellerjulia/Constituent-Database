@@ -38,7 +38,7 @@ public class ConstituentDatabase {
     do {
       try (final Connection connection = DriverManager.getConnection(CONN_URI);) {
 
-        // get input(s)
+        // gives the user all of the options
         System.out.println("Type \"1\" to add a new constituent to a newsletter\n" +
             "Type \"2\" to update the work phone number of a constituent\n" +
             "Type \"3\" to delete an event from the database\n" +
@@ -58,9 +58,11 @@ public class ConstituentDatabase {
 
         userInput = input.next();
 
+        // adds a constituent to a newsletter
         if (userInput.equals("1")) {
           System.out.println("Here's a list of all the newsletterIds and nameIds");
 
+          //queries that give the user enough information to perform this task
           final String queryNewsletters = "SELECT n.newsletterId FROM Newsletter n ORDER BY n.newsletterId ASC;";
           final String queryConstituents = "SELECT c.nameId FROM Constituent c ORDER BY c.nameId ASC;";
           final String queryConnections = "SELECT n.newsletterId, c.nameId\n"
@@ -68,6 +70,9 @@ public class ConstituentDatabase {
               + "  INNER JOIN EmailsForNewsletter e ON n.newsletterId = e.emailNewsletterId\n"
               + "    INNER JOIN Constituent c ON e.constituentNameId = c.nameId;";
 
+          /* all arraylists in this program are used to prevent the user from entering a value for something
+           * in the database that does exist (i.e. the user won't be able to reference an nameId for a constituent
+           * if that nameId isn't in the database*/
           ArrayList<String> validNLIds = new ArrayList<String>();
           ArrayList<String> validNIds = new ArrayList<String>();
 
@@ -109,6 +114,8 @@ public class ConstituentDatabase {
                 res2Next = res2.next();
               }
               System.out.println();
+              
+              // help avoid duplication
               System.out.println("These connections already exist");
               while (res3.next()) {
                 System.out.printf("NewsletterId: %s to NameId: %s%n", res3.getInt(1), res3.getInt(2));
@@ -148,9 +155,12 @@ public class ConstituentDatabase {
 
           System.out.println("Added constituent with id \"" + param2 + "\" to newsletter with id \"" + param1 + "\"");
 
+          // updates the work phone number of a constituent
         } else if (userInput.equals("2")) {
 
           System.out.println("Here's a list of all the nameIds");
+          
+          // gives the user information to perform the query
           final String queryConstituents = "SELECT c.nameId FROM Constituent c ORDER BY c.nameId ASC;";
 
           ArrayList<String> validNIds = new ArrayList<String>();
@@ -189,8 +199,10 @@ public class ConstituentDatabase {
 
           System.out.println("Updated work phone number of constituent with id \"" + param2 + "\" to " + param1);
 
+          // deletes an event (any corresponding eventRsvps are also deleted)
         } else if (userInput.equals("3")) {
 
+          // gives the user information to perform the query
           System.out.println("Here's a list of all the event ids and event names");
           final String queryConstituents = "SELECT e.eventId, e.eventName\n"
               + "FROM Events e;";
@@ -226,8 +238,10 @@ public class ConstituentDatabase {
 
           System.out.println("Event with id \"" + param + "\" removed from database");
 
+          // adds a new address to the database
         } else if (userInput.equals("4")) {
 
+           // avoids an issue where there might not be an apartment because the user can't input a null value
           System.out.println("Is this an apartment? Type Y for yes or N for no");
 
           String apt = input.next();
@@ -272,8 +286,10 @@ public class ConstituentDatabase {
 
           System.out.println("Added the new address to the databasee");
 
+          // adds a new constituent
         } else if (userInput.equals("5")) {
 
+          // gives the user information to perform the query
           System.out.println("Here's a list of all the nameIds, address information, and party information");
           final String queryConstituents = "SELECT c.nameId FROM Constituent c ORDER BY c.nameId ASC;";
           final String queryAddress = "SELECT * FROM Address;";
@@ -590,14 +606,16 @@ public class ConstituentDatabase {
             stmt.setString(2, param);
 
             try (final ResultSet res = stmt.executeQuery()) {
-              if (res.next()) {
+              boolean emptyWard = true; // to see if there are any residents in that ward
                 while (res.next()) {
+                  emptyWard = false;
                   System.out.printf("Percent of Ward in Party: %s%%; Party Id: %s; Party Name: %s; Ward: %s%n", 
                       res.getDouble(1)*100, res.getInt(2), res.getString(3), res.getInt(4));
                 }
-              } else {
-                System.out.println("No constituents on record in this ward");
-              }
+                if (emptyWard) {
+                  System.out.println("No residents on record live in that ward");
+                }
+              
             }
           }
         } else if (userInput.equals("15")) {
