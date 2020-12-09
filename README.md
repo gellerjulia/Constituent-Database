@@ -48,7 +48,7 @@ C:\Users\yourusernamehere\Downloads --> followed by the name of the downloaded f
 
 Then type: 
 
-java -cp bin:mariadb-java-client-2.1.1.jar databases.ConstituentDatabase
+javac ConstituentDatabase.java
 
 Finally type:
 
