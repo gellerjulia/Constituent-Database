@@ -25,7 +25,9 @@ Now the ddl.sql and dml.sql file must be imported. There will be an import tab i
 
 If you are using an OS operating system, navigate to Terminal.
 First enter the downloaded zip file. This is done by typing cd and then the source path. For me, I type: 
+
 cd /Users/trevorkhanna/Downloads/database-project-main
+
 Then compile the source code. To do this, type javac -d bin and then the source path. For example, I would type:
 
 javac -d bin /Users/trevorkhanna/Downloads/database-project-main/ConstituentDatabase.java
